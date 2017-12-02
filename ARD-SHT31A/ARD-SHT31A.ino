@@ -33,7 +33,7 @@ void loop() {
   int tValue = analogRead(PIN_T);
   int rhValue = analogRead(PIN_RH);
 
-  t = -66.875+218.75*(tValue*0.0049)/VDD;   // equation : -66.875+218.75*(Vt/Vdd)   | Vt = analogT*0.0049  
+  t = -66.875+218.75*(tValue*0.0049)/VDD;   // equation : -66.875+218.75*(Vt/Vdd)   | Vt = analogT*0.0049 (1023*0.0049=5V)
   f = -88.375+393.75*(tValue*0.0049)/VDD;   // equation : -88.375+393.75*(Vt/Vdd)   | Vt = analogT*0.0049
   rh = -12.5+125*(rhValue*0.0049)/VDD;      // equation : -12.5+125*(Vrh/Vdd)       | Vrh = analogRH*0.0049 
   
